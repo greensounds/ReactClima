@@ -26470,9 +26470,18 @@
 	
 	var Examples = function Examples(props) {
 		return React.createElement(
-			'h2',
+			'div',
 			null,
-			'Examples'
+			React.createElement(
+				'h2',
+				null,
+				'Ejemplos'
+			),
+			React.createElement(
+				'p',
+				null,
+				'Bienvenido a Github'
+			)
 		);
 	};
 	
