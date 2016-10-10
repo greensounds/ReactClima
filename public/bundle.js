@@ -24956,7 +24956,16 @@
 	
 		onSearch: function onSearch(e) {
 			e.preventDefault();
-			alert('Espera');
+			var location = this.refs.buscar.value;
+			//alert(location);
+			var encodedLocation = encodeURIComponent(location);
+	
+			if (location.length > 0) {
+				this.refs.buscar.value = '';
+				window.location.hash = '#/?location=' + encodedLocation;
+			}
+	
+			//alert('Espera');
 		},
 		render: function render() {
 			return React.createElement(
@@ -25014,7 +25023,7 @@
 							React.createElement(
 								'li',
 								null,
-								React.createElement('input', { type: 'search', placeholder: 'Busca el clima de tu ciudad' })
+								React.createElement('input', { type: 'search', placeholder: 'Busca el clima de tu ciudad', ref: 'buscar' })
 							),
 							React.createElement(
 								'li',
@@ -25057,7 +25066,9 @@
 	
 			this.setState({
 				isLoading: true,
-				errorMessage: undefined
+				errorMessage: undefined,
+				location: undefined,
+				temp: undefined
 			});
 			openWeatherMap.getTemp(location).then(function (temp) {
 				that.setState({
@@ -25077,6 +25088,22 @@
 	  	location: location,
 	  	temp: 30
 	  })*/
+		},
+		componentDidMount: function componentDidMount() {
+			var location = this.props.location.query.location;
+	
+			if (location && location.length > 0) {
+				this.handleSearch(location);
+				window.location.hash = "#/";
+			}
+		},
+		componentWillReceiveProps: function componentWillReceiveProps(newProps) {
+			var location = newProps.location.query.location;
+	
+			if (location && location.length > 0) {
+				this.handleSearch(location);
+				window.location.hash = "#/";
+			}
 		},
 		render: function render() {
 			var _state = this.state;
