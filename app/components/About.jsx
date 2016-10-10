@@ -11,7 +11,7 @@ var React = require('react');
 var About = (props) => {
 	return (
 		<div>
-		<h2 className="text-center">Acerca</h2>
+		<h2 className="text-center page-title">Acerca</h2>
 		<p>Esta aplicación te permitirá consultar el clima de cualquier ciudad del mundo</p>
 		<p>Algunas de las herramientas utilizadas en este proyecto son: </p>
 		<ul>
