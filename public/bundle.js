@@ -24916,17 +24916,20 @@
 	var Nav = __webpack_require__(224);
 	
 	var Main = function Main(props) {
-			return React.createElement(
+		return React.createElement(
+			'div',
+			null,
+			React.createElement(Nav, null),
+			React.createElement(
+				'div',
+				{ className: 'row' },
+				React.createElement(
 					'div',
-					null,
-					React.createElement(Nav, null),
-					React.createElement(
-							'h2',
-							null,
-							'Main Component'
-					),
+					{ className: 'columns  medium-6  large-4 small-centered' },
 					props.children
-			);
+				)
+			)
+		);
 	};
 	
 	module.exports = Main;
@@ -26586,19 +26589,46 @@
 	
 	var React = __webpack_require__(8);
 	
+	var _require = __webpack_require__(166);
+	
+	var Link = _require.Link;
+	
+	
 	var Examples = function Examples(props) {
 		return React.createElement(
 			'div',
 			null,
 			React.createElement(
 				'h2',
-				null,
+				{ className: 'text-center' },
 				'Ejemplos'
 			),
 			React.createElement(
 				'p',
 				null,
-				'Bienvenido a Github'
+				'Aquí hay algunas ciudades para probar la aplicación'
+			),
+			React.createElement(
+				'ol',
+				null,
+				React.createElement(
+					'li',
+					null,
+					React.createElement(
+						Link,
+						{ to: '/?location=Mexico' },
+						'Ciudad de México, MX'
+					)
+				),
+				React.createElement(
+					'li',
+					null,
+					React.createElement(
+						Link,
+						{ to: '/?location=Toronto' },
+						'Toronto, CA'
+					)
+				)
 			)
 		);
 	};
