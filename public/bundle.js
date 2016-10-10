@@ -26550,7 +26550,7 @@
 /* 251 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 	
 	var React = __webpack_require__(8);
 	
@@ -26564,17 +26564,44 @@
 	
 	var About = function About(props) {
 		return React.createElement(
-			'div',
+			"div",
 			null,
 			React.createElement(
-				'h3',
-				null,
-				'Acerca'
+				"h2",
+				{ className: "text-center" },
+				"Acerca"
 			),
 			React.createElement(
-				'p',
+				"p",
 				null,
-				'Esta aplicación te permitirá consultar el clima de cualquier ciudad del mundo'
+				"Esta aplicación te permitirá consultar el clima de cualquier ciudad del mundo"
+			),
+			React.createElement(
+				"p",
+				null,
+				"Algunas de las herramientas utilizadas en este proyecto son: "
+			),
+			React.createElement(
+				"ul",
+				null,
+				React.createElement(
+					"li",
+					null,
+					React.createElement(
+						"a",
+						{ href: "https://github.com/facebook/react" },
+						"React.js"
+					)
+				),
+				React.createElement(
+					"li",
+					null,
+					React.createElement(
+						"a",
+						{ href: "https://openweathermap.org/" },
+						"Open Weather Map"
+					)
+				)
 			)
 		);
 	};
