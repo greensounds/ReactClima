@@ -36,7 +36,7 @@ var Weather = React.createClass({
 
 		function renderMessage() {
 			if(isLoading) {
-				return <h3>Cargando clima...</h3>
+				return <h2 className="text-center">Cargando clima...</h2>
 			} else if(temp && location) {
 				return <WeatherMessage temp={ temp} location = {location}/>
 			}
@@ -44,7 +44,7 @@ var Weather = React.createClass({
 
 		return(
 			<div>
-			<h2>Averigua el clima en tu ciudad</h2>
+			<h2 className="text-center">Averigua el clima en tu ciudad</h2>
 			<WeatherForm onSearch= {this.handleSearch}/>
 			{renderMessage()}
 			</div>

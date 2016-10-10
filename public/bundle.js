@@ -25078,8 +25078,8 @@
 			function renderMessage() {
 				if (isLoading) {
 					return React.createElement(
-						'h3',
-						null,
+						'h2',
+						{ className: 'text-center' },
 						'Cargando clima...'
 					);
 				} else if (temp && location) {
@@ -25092,7 +25092,7 @@
 				null,
 				React.createElement(
 					'h2',
-					null,
+					{ className: 'text-center' },
 					'Averigua el clima en tu ciudad'
 				),
 				React.createElement(WeatherForm, { onSearch: this.handleSearch }),
@@ -25134,7 +25134,7 @@
 					React.createElement('input', { type: 'text', ref: 'location', placeholder: 'Ingresa una ciudad' }),
 					React.createElement(
 						'button',
-						null,
+						{ className: 'button  expanded  hollow' },
 						'Enviar'
 					)
 				)
@@ -25148,7 +25148,7 @@
 /* 227 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 	
 	var React = __webpack_require__(8);
 	
@@ -25157,14 +25157,14 @@
 		var location = _ref.location;
 	
 		return React.createElement(
-			'div',
+			"div",
 			null,
 			React.createElement(
-				'h2',
-				null,
-				'La temperatura es ',
+				"h2",
+				{ className: "text-center" },
+				"La temperatura es ",
 				temp,
-				' en ',
+				" en ",
 				location
 			)
 		);
