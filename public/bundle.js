@@ -24979,7 +24979,7 @@
 							React.createElement(
 								IndexLink,
 								{ to: '/', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
-								'Get Weather'
+								'Buscar Clima'
 							)
 						),
 						React.createElement(
@@ -24988,7 +24988,7 @@
 							React.createElement(
 								Link,
 								{ to: '/about', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
-								'About'
+								'Acerca'
 							)
 						),
 						React.createElement(
@@ -24997,7 +24997,7 @@
 							React.createElement(
 								Link,
 								{ to: '/examples', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
-								'Examples'
+								'Ejemplos'
 							)
 						)
 					)
